@@ -453,7 +453,7 @@
 
         protected virtual void SetHand()
         {
-            Cursor.visible = false;
+            //Cursor.visible = false;
             isHand = true;
             rightHand.gameObject.SetActive(true);
             leftHand.gameObject.SetActive(true);
@@ -469,7 +469,7 @@
 
         protected virtual void SetMove()
         {
-            Cursor.visible = true;
+            //Cursor.visible = true;
             isHand = false;
             if (hideHandsAtSwitch)
             {

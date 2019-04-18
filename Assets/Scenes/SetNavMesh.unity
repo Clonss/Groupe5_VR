@@ -1746,6 +1746,63 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1001 &572643663
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 100004, guid: 950854b0e5850734db12d3c0e448f52b, type: 3}
+      propertyPath: m_Name
+      value: teleportbeam
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 950854b0e5850734db12d3c0e448f52b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 950854b0e5850734db12d3c0e448f52b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 950854b0e5850734db12d3c0e448f52b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 950854b0e5850734db12d3c0e448f52b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 950854b0e5850734db12d3c0e448f52b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 950854b0e5850734db12d3c0e448f52b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 950854b0e5850734db12d3c0e448f52b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 950854b0e5850734db12d3c0e448f52b, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 950854b0e5850734db12d3c0e448f52b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 950854b0e5850734db12d3c0e448f52b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 950854b0e5850734db12d3c0e448f52b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 950854b0e5850734db12d3c0e448f52b, type: 3}
 --- !u!1 &615736128
 GameObject:
   m_ObjectHideFlags: 0
@@ -5226,6 +5283,7 @@ GameObject:
   - component: {fileID: 1761641367}
   - component: {fileID: 1761641366}
   - component: {fileID: 1761641368}
+  - component: {fileID: 1761641369}
   m_Layer: 0
   m_Name: VRSimulator
   m_TagString: Untagged
@@ -5299,7 +5357,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e62d5ca10a32cb34f9e1454aa3938053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointerObj: {fileID: 258280966}
+  pointerObj: {fileID: 1967163527}
+--- !u!195 &1761641369
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761641365}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &1780508180
 GameObject:
   m_ObjectHideFlags: 0
@@ -5313,7 +5393,7 @@ GameObject:
   - component: {fileID: 1780508183}
   - component: {fileID: 1780508181}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Obstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5513,7 +5593,7 @@ GameObject:
   - component: {fileID: 1911416121}
   - component: {fileID: 1911416120}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Sol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5550,7 +5630,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 712cd3a70a5a1da41a6594aac6a97abe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5708,6 +5788,12 @@ Behaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1929339759}
   m_Enabled: 1
+--- !u!4 &1967163527 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400004, guid: 950854b0e5850734db12d3c0e448f52b,
+    type: 3}
+  m_PrefabInstance: {fileID: 572643663}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2001139685
 GameObject:
   m_ObjectHideFlags: 0
